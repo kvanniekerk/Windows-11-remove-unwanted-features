@@ -2,7 +2,7 @@
 
 This project provides a lightweight batch script to make Windows 11 feel more like Windows 7 or 10, without aggressive debloating. The script applies safe tweaks such as:
 
-* Remove Bing search results from the Start menu
+* Remove Bing and Microsoft Store search results from the Start menu
 * Remove taskbar Search icon
 * Restore the full (classic) right-click context menu
 * Show file extensions for all files
