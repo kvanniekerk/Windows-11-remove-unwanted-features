@@ -19,6 +19,7 @@ echo Registry keys added successfully, Bing search results will no longer appear
 
 :: Remove Search icon from taskbar
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v SearchboxTaskbarMode /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v SearchboxTaskbarMode /t REG_DWORD /d 0 /f
 echo Taskbar Search icon removed.
 
 :: Enable full right-click context menu (classic)
@@ -36,6 +37,10 @@ echo Task View button removed.
 :: Remove Taskbar Chat
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v TaskbarMn /t REG_DWORD /d 0 /f
 echo Taskbar Chat removed.
+
+:: Enable End Task option for running apps on the taskbar
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v TaskbarEndTask /t REG_DWORD /d 1 /f
+echo End Task option enabled for taskbar apps.
 
 :: Move taskbar to the left (classic position)
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v TaskbarAl /t REG_DWORD /d 0 /f
