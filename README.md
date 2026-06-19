@@ -6,7 +6,8 @@ This project provides a lightweight batch script to make Windows 11 feel more li
 * Remove taskbar Search icon
 * Restore the full (classic) right-click context menu
 * Show file extensions for all files
-* Disable Widgets
+* Disable Widgets (taskbar toggle and policy)
+* Disable lock screen news/tips and Windows Spotlight content
 * Remove Task View (desktop switch) button
 * Remove Taskbar Chat
 * Enable End Task option on taskbar app right-click
@@ -23,4 +24,4 @@ No aggressive debloating or removal of core Windows features is performed. The s
 
 ## Reverting to Default Windows 11 Features
 
-If you want to restore all features back to the default Windows 11 experience, use the `restore_default_features.bat` script included in this repository. This script will revert all changes made by `remove_unwanted_features.bat`, including PowerShell execution policy, context menus, taskbar, widgets, file extensions, and more. It is safe to run even if some settings are already at their default values.
+If you want to restore all features back to the default Windows 11 experience, use the `restore_default_features.bat` script included in this repository. This script will revert all changes made by `remove_unwanted_features.bat`, including PowerShell execution policy, context menus, taskbar settings, widgets (including policy values), lock screen Spotlight/news content, file extensions, and more. It is safe to run even if some settings are already at their default values.
