@@ -8,6 +8,7 @@ This project provides a lightweight batch script to make Windows 11 feel more li
 * Show file extensions for all files
 * Disable Widgets (taskbar toggle and policy)
 * Disable lock screen news/tips and Windows Spotlight content
+* Disable Windows welcome/setup completion prompts and startup tips notifications
 * Remove Task View (desktop switch) button
 * Remove Taskbar Chat
 * Enable End Task option on taskbar app right-click
