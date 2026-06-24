@@ -14,6 +14,8 @@ This project provides a lightweight batch script to make Windows 11 feel more li
 * Enable End Task option on taskbar app right-click
 * Move the taskbar to the left (classic position)
 * Show all system tray icons
+* Block common Windows telemetry services/tasks and reduce telemetry network traffic
+* Restore telemetry/network settings back to defaults
 
 **Note:** A restart may be required for changes to take effect.
 
@@ -26,3 +28,16 @@ No aggressive debloating or removal of core Windows features is performed. The s
 ## Reverting to Default Windows 11 Features
 
 If you want to restore all features back to the default Windows 11 experience, use the `restore_default_features.bat` script included in this repository. This script will revert all changes made by `remove_unwanted_features.bat`, including PowerShell execution policy, context menus, taskbar settings, widgets (including policy values), lock screen Spotlight/news content, file extensions, and more. It is safe to run even if some settings are already at their default values.
+
+## Telemetry and Network Hardening
+
+To apply additional privacy-focused hardening that blocks common Windows telemetry pathways and unwanted outbound traffic, run `block_telemetry_traffic.bat` as Administrator.
+
+This script:
+
+* Disables common telemetry/feedback services and scheduled tasks
+* Applies telemetry-related policy restrictions
+* Adds outbound firewall block rules for telemetry executables
+* Adds a tagged block of telemetry hostnames to the hosts file
+
+To reverse only these telemetry/network hardening changes, run `restore_telemetry_traffic_defaults.bat` as Administrator.
