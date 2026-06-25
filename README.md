@@ -31,7 +31,7 @@ If you want to restore all features back to the default Windows 11 experience, u
 
 ## Telemetry and Network Hardening
 
-To apply additional privacy-focused hardening that blocks common Windows telemetry pathways and unwanted outbound traffic, run `block_telemetry_traffic.bat` as Administrator.
+To apply additional privacy-focused hardening that blocks common Windows telemetry pathways and unwanted outbound traffic, run `telemetry_block_traffic.bat` as Administrator.
 
 This script:
 
@@ -40,4 +40,4 @@ This script:
 * Adds outbound firewall block rules for telemetry executables
 * Adds a tagged block of telemetry hostnames to the hosts file
 
-To reverse only these telemetry/network hardening changes, run `restore_telemetry_traffic_defaults.bat` as Administrator.
+To reverse only these telemetry/network hardening changes, run `telemetry_restore_defaults.bat` as Administrator.
