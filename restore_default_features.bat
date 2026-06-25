@@ -68,5 +68,8 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v EnableAutoT
 :: Hide file extensions in File Explorer (default: hidden)
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v HideFileExt /t REG_DWORD /d 1 /f
 
+:: Restore default Print Screen behavior (opens screen capture)
+reg add "HKCU\Control Panel\Keyboard" /v PrintScreenKeyForSnippingEnabled /t REG_DWORD /d 1 /f
+
 echo All features restored to Windows 11 defaults. Some settings may require a restart or sign out to take effect.
 pause

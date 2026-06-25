@@ -80,4 +80,8 @@ echo Taskbar moved to the left.
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v HideFileExt /t REG_DWORD /d 0 /f
 echo File extensions will be shown in File Explorer.
 
+:: Make Print Screen copy full screen to clipboard (classic behavior)
+reg add "HKCU\Control Panel\Keyboard" /v PrintScreenKeyForSnippingEnabled /t REG_DWORD /d 0 /f
+echo Print Screen now uses classic full-screen-to-clipboard behavior.
+
 pause

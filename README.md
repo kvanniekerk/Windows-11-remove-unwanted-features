@@ -14,6 +14,7 @@ This project provides a lightweight batch script to make Windows 11 feel more li
 * Enable End Task option on taskbar app right-click
 * Move the taskbar to the left (classic position)
 * Show all system tray icons
+* Set Print Screen to classic full-screen capture to clipboard (Windows 10-style)
 * Block common Windows telemetry services/tasks and reduce telemetry network traffic
 * Restore telemetry/network settings back to defaults
 
@@ -27,7 +28,7 @@ No aggressive debloating or removal of core Windows features is performed. The s
 
 ## Reverting to Default Windows 11 Features
 
-If you want to restore all features back to the default Windows 11 experience, use the `restore_default_features.bat` script included in this repository. This script will revert all changes made by `remove_unwanted_features.bat`, including PowerShell execution policy, context menus, taskbar settings, widgets (including policy values), lock screen Spotlight/news content, file extensions, and more. It is safe to run even if some settings are already at their default values.
+If you want to restore all features back to the default Windows 11 experience, use the `restore_default_features.bat` script included in this repository. This script will revert all changes made by `remove_unwanted_features.bat`, including PowerShell execution policy, context menus, taskbar settings, widgets (including policy values), lock screen Spotlight/news content, file extensions, Print Screen behavior, and more. It is safe to run even if some settings are already at their default values.
 
 ## Telemetry and Network Hardening
 
