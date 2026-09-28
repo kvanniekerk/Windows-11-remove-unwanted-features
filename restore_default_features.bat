@@ -15,9 +15,10 @@ echo PowerShell execution policy set to Restricted (default).
 
 :: Restore Bing search in the Start Menu (default: enabled)
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v BingSearchEnabled /t REG_DWORD /d 1 /f
-reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Policies\Microsoft\Windows\Windows Search" /v DisableWebSearch /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Policies\Microsoft\Windows\Windows Search" /v ConnectedSearchUseWeb /t REG_DWORD /d 1 /f
+:: Delete (not just reset) GPO-style values, since their mere presence keeps the policy-enforced search path active
+reg delete "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /f >nul 2>&1
+reg delete "HKCU\Software\Policies\Microsoft\Windows\Windows Search" /v DisableWebSearch /f >nul 2>&1
+reg delete "HKCU\Software\Policies\Microsoft\Windows\Windows Search" /v ConnectedSearchUseWeb /f >nul 2>&1
 
 :: Restore Search icon on the taskbar (default)
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v SearchboxTaskbarMode /t REG_DWORD /d 1 /f

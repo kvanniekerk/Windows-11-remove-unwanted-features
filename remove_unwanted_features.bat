@@ -15,8 +15,9 @@ if %errorLevel% == 0 (
 
 :: Disable Bing search in the Start Menu
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v BingSearchEnabled /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Policies\Microsoft\Windows\Windows Search" /v DisableWebSearch /t REG_DWORD /d 1 /f
-reg add "HKCU\Software\Policies\Microsoft\Windows\Windows Search" /v ConnectedSearchUseWeb /t REG_DWORD /d 0 /f
+:: DisableWebSearch/ConnectedSearchUseWeb are device-scoped GPO keys; setting them under HKCU forces a policy-enforced search code path that causes Start menu search lag
+:: reg add "HKCU\Software\Policies\Microsoft\Windows\Windows Search" /v DisableWebSearch /t REG_DWORD /d 1 /f
+:: reg add "HKCU\Software\Policies\Microsoft\Windows\Windows Search" /v ConnectedSearchUseWeb /t REG_DWORD /d 0 /f
 :: DisableSearchBoxSuggestions intentionally omitted: causes multi-second Start menu search delays (known Explorer bug)
 :: reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f
 echo Registry keys added successfully, Bing search results will no longer appear in the start menu.
