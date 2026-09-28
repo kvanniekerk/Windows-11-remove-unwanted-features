@@ -20,6 +20,8 @@ This project provides a lightweight batch script to make Windows 11 feel more li
 
 **Note:** A restart may be required for changes to take effect.
 
+**Note:** The `DisableSearchBoxSuggestions` policy is intentionally left untouched, as it is known to cause multi-second Start menu search delays.
+
 ## Customization
 
 Each tweak in the script can be commented or uncommented depending on your requirements. Simply open `remove_unwanted_features.bat` in a text editor and add or remove `::` at the beginning of lines to enable or disable specific features.
